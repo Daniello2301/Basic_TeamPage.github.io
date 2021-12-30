@@ -1,0 +1,124 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    height: 10rem;
+    position: relative;
+}
+header h1
+{
+    margin-right: 10rem;
+}
+header .content-header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header .content-header h3
+{
+    margin: 10px 0px; 
+}
+header .content-header p
+{
+    width: 300px;
+}
+.container {
+    height: calc(100vh - 10rem);
+    margin: 2rem;
+    display: grid;
+    justify-items: center;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5em 0px;
+}
+.container .card-profile
+{
+    width: 15rem;
+    position: relative;
+}
+.container .card-profile:nth-child(2),
+.container .card-profile:nth-child(5)
+{
+    position: relative;
+    top: 6rem;
+}
+.container .card-profile p
+{
+    width: 140px;
+    height: 20px;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 4rem;
+    right:-5rem;
+}
+.container .card-profile .image {
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container .card-profile .image img {
+    width: 100%;
+}
+
+@media screen and (max-width: 770px) {
+    *
+    {
+        box-sizing:border-box;
+    }
+    header
+    {
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5rem;
+    }
+    header h1
+    {
+        margin: auto;
+    }
+    div.container {
+        height: calc(100vh - 15rem);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);        
+        margin: auto;
+        position: relative;
+    }
+    .container .card-profile
+    {
+        width: 12rem;
+    }
+    .container .card-profile:nth-child(5)
+    {
+        top: 0;
+    }
+    .container .card-profile:nth-child(4),
+    .container .card-profile:nth-child(6)
+    {
+        position: relative;
+        top: 5rem;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    *
+    {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container .card-profile
+    {
+        width: 100px;
+    }
+}
